@@ -1,3 +1,8 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { MyEditor } from './my-editor/my-editor';
+export const routes: Routes = [
+  {
+    path: 'editor',
+    component: MyEditor,
+  },
+];

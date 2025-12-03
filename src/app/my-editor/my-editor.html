@@ -1,0 +1,15 @@
+<div class="app-container">
+  <div class="main-content">
+    <!-- Panel Derecho: Editor Monaco -->
+    <div class="panel right-panel">
+      <div class="panel-header flex-between">
+        <span>Editor JavaScript</span>
+        <span class="status-ready" *ngIf="editorLoaded">Listo: Escribe "contexto."</span>
+        <span class="status-loading" *ngIf="!editorLoaded">Cargando Monaco...</span>
+      </div>
+
+      <!-- Contenedor del Editor -->
+      <div #editorContainer class="editor-container"></div>
+    </div>
+  </div>
+</div>
