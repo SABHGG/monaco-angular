@@ -1,1 +1,39 @@
-<router-outlet />
+<div class="main-layout">
+  <div class="sidebar">
+    <h2>Configurar Contexto</h2>
+    <div class="form-group">
+      <label>Nombre de propiedad:</label>
+      <input type="text" [(ngModel)]="newPropName" placeholder="ej. usuario" />
+    </div>
+
+    <div class="form-group">
+      <label>Tipo de dato:</label>
+      <select [(ngModel)]="newPropType">
+        <option value="string">String</option>
+        <option value="number">Number</option>
+        <option value="boolean">Boolean</option>
+        <option value="object">Object</option>
+        <option value="array">Array</option>
+      </select>
+    </div>
+
+    <button (click)="addProperty()" [disabled]="!newPropName">Añadir al Contexto</button>
+
+    <div class="current-context">
+      <h3>Contexto Actual:</h3>
+      <pre>{{ contextData | json }}</pre>
+    </div>
+  </div>
+
+  <div class="editor-area">
+    <app-my-editor [contextData]="contextData" [(code)]="editorContent"> </app-my-editor>
+
+    <div
+      class="output-preview"
+      style="margin-top: 10px; padding: 10px; background: #eee; border-top: 1px solid #ccc"
+    >
+      <strong>Contenido recuperado:</strong>
+      <pre>{{ editorContent }}</pre>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+.main-layout {
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.sidebar {
+    width: 300px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.editor-area {
+    flex: 1;
+    overflow: hidden;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input,
+select,
+button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #007acc;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.current-context {
+    margin-top: 20px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: auto;
+    flex: 1;
+}
+
+pre {
+    font-size: 12px;
+    margin: 0;
+}
